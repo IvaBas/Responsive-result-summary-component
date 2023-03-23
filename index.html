@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Noto+Nastaliq+Urdu&display=swap');
+    
+
+    * {
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+    .comment {
+      display: flex;
+      width: 15rem;
+      border-radius: 0.3rem;
+      padding: 0.625rem;
+      margin-bottom: 0.5rem;
+    }
+    .grey {
+      color: #9A959C;
+    }
+    .icon {
+      margin-right: 0.0625rem;
+    }
+
+    #comment1 {
+      background-color: #FFF6F5;
+    }
+    #reaction {
+      color: #DD7075;
+      margin-right: 4.7rem;
+    }
+
+    #comment2 {
+      background-color: #FFFBF2;
+    }
+    #memory {
+      color: #F4BC4D;
+      margin-right: 4.8rem;
+    }
+
+    #comment3 {
+      background-color: #F2FBFA;
+    }
+    #verbal {
+      color: #2C9F82;
+      margin-right: 5.5rem;
+    }
+
+    #comment4 {
+      background-color: #F3F3FD;
+    }
+    #visual {
+      color: #4D54A4;
+      margin-right: 5.7rem;
+    }
+
+    #summary>h3 {
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      width: 15rem;
+      padding: 0.625rem;
+      border-radius: 2rem;
+      background-color: #303B59;
+      border: none;
+      color: white;
+      margin-top: 1.5rem;
+    }
+
+
+    #result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(#6541FD, #332DE9);
+      width: 20rem;
+      padding: 3rem;
+      color: white;
+      border-radius: 2rem;
+      box-shadow: 0.7rem 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
+    }
+
+    #summary {
+      background-color: white;
+      width: 20rem;
+      padding: 3rem;
+      border-radius: 2rem;
+      box-shadow: 0.7rem 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
+    }
+
+    #container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10rem;
+    }
+
+    #circle {
+      width: 9rem;
+      height: 9rem;
+      border-radius: 9rem;
+      background-image: linear-gradient(rgba(76,35,202,1), rgba(76,35,202,0));
+      margin-bottom: 1rem;
+    }
+
+    #circle>p {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 800;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #result_number {
+      font-size: 4rem;
+      margin-top: 1.3rem;
+    }
+    #result>h2 {
+      margin-bottom: 1rem;
+    }
+    #text {
+      text-align: center;
+    }
+    #heading_result {
+      margin-bottom: 1rem;
+    }
+
+    @media all and (max-width: 670px) {
+      #container {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+      }
+
+      #result {
+        border-radius: 0 0 2rem 2rem;
+        box-shadow: 0 0 0 0;
+      }
+      #summary {
+        border-radius: 0;
+        box-shadow: 0 0 0 0;
+      }
+    }
+
+    /* @media all and (min-width: 1440px) {
+      #container {
+        background-color: white;
+        padding: 8rem;
+        width: 60rem;
+        box-shadow: 0.7rem 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
+      }
+      body {
+        background-image: url(./images/abstract_background.jpg);
+      }
+    } */
+  </style>
+</head>
+<body>
+
+  <div id="container">
+
+    <!-- Result -->
+    <div id="result">
+      <p id="heading_result"><span class="grey">Your Result</span></p>
+      <div id="circle">
+        <p id="result_number">76</p>
+        <p><span class="grey">of 100</span></p>
+      </div>
+
+      <h2>Great</h2>
+      <p id="text"><span class="grey">You scored higher than 65% of the people who have taken these tests.</span></p>
+    </div>
+
+<!-- Summary -->
+
+    <div id="summary">
+      <h3>Summary</h3>
+    
+    <section>
+
+      <div id="comment1" class="comment">
+        <img class="icon" src="./images/icon-reaction.svg">
+        <p id="reaction">Reaction</p>
+        <p class="points">80 <span class="grey">/ 100</span></p>
+      </div>
+
+      <div id="comment2" class="comment">
+        <img class="icon" src="./images/icon-memory.svg">
+        <p id="memory">Memory</p>
+        <p class="points">92 <span class="grey">/ 100</span></p>
+      </div>
+
+      <div id="comment3" class="comment">
+        <img class="icon" src="./images/icon-verbal.svg">
+        <p id="verbal">Verbal</p>
+        <p>61 <span class="grey">/ 100</span></p>
+      </div>
+
+      <div id="comment4" class="comment">
+        <img class="icon" src="./images/icon-visual.svg">
+        <p id="visual">Visual</p>
+        <p>72 <span class="grey">/ 100</span></p>
+      </div>
+    </section>
+
+      <div>
+        <button>Continue</button>
+      </div>
+    
+    </div>
+  </div>
+  
+</body>
+</html>
